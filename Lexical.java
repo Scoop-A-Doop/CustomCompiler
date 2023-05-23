@@ -7,10 +7,7 @@ import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-/*
-*
-* @author abrouill
-*/
+
 import java.io.*;
 @SuppressWarnings("unused")
 public class Lexical {
@@ -192,7 +189,6 @@ public class Lexical {
 		}
 		//set the mnemonic
 		if (result != null) {
-			// THIS LINE REMOVED-- PUT BACK IN TO USE LOOKUP
 			result.mnemonic = mnemonics.LookupCode(result.code);
 			if (printToken) {
 				System.out.println("\t" + result.mnemonic + " | \t" + 

@@ -1,7 +1,3 @@
-/* Name: Suleyman Shouib
- * Course: CS 4100
- * Term: Spring 2023
- */
 package ADT;
 import java.io.FileWriter;
 import java.io.IOException;

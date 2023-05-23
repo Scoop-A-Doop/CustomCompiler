@@ -1,7 +1,3 @@
-/* Name: Suleyman Shouib
- * Course: CS 4100
- * Term: Spring 2023
- */
 package ADT;
 
 import java.io.FileWriter;
@@ -67,9 +63,7 @@ public class QuadTable {
 		}
 	}
 	
-	/* Function provided by Professor Al Brouillette, applies padding format around the string "input". 
-	 * Padding size is determined by len and padding direction determined by left (true = left, false = right). Returns the padded string
-	 */
+	// Padding size is determined by len and padding direction determined by left (true = left, false = right). Returns the padded string 
 	public String pad(String input, int len, boolean left) {
 	    while (input.length() < len){
 	        if (left)

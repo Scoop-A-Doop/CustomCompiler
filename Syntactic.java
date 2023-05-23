@@ -1,15 +1,6 @@
-/* Name: Suleyman Shouib
- * Course: CS 4100
- * Term: Spring 2023
- */
 package ADT;
-
 import java.util.ArrayList;
 
-/**
-*
-* @author abrouill
-*/
 public class Syntactic {
 	private String filein; //The full file path to input file
 	private SymbolTable symbolList; //Symbol table storing ident/const
@@ -29,7 +20,7 @@ public class Syntactic {
 	private ArrayList<String> declaredIdentifiers = new ArrayList<String>();	//Keeps track of all identifiers that were declared
 	private int factorIndex = 0;	//Keeps track of the number of the custom variables
 	
-	/* CFG PART B
+	/* CFG 
 	 * <program>			---> $UNIT <identifier> $SEMIColon <block> $PERIOD
 	 * <block> 				---> {<variable-dec-sec>}* <block-body>
 	 * <block-body> 		---> $BEGIN <statement> {$SCOLN <statement>} $END
@@ -61,9 +52,6 @@ public class Syntactic {
 		filein = filename;
 		traceon = traceOn;
 		symbolList = new SymbolTable(symbolSize);
-		// Add these to symbol table to accommodate sign flips
-		//Minus1Index = symbolList.AddSymbol("-1", symbolList.constantkind, -1);
-		//Plus1Index = symbolList.AddSymbol("1", symbolList.constantkind, 1);
 		Minus1Index = symbolList.AddSymbol("-1", 'c', -1);
 		Plus1Index = symbolList.AddSymbol("1", 'c', 1);
 		quads = new QuadTable(quadSize);
@@ -89,7 +77,6 @@ public class Syntactic {
 		recur = Program();
 		
 		//Done with recursion, so add the final STOP quad
-		//quads.AddQuad(interp.opcodeFor("STOP"), 0, 0, 0);
 		quads.AddQuad(interp.optable.LookupName("STOP"), 0, 0, 0);
 		
 		//Print SymbolTable, QuadTable before execute

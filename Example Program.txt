@@ -1,6 +1,6 @@
 UNIT Codegen;
 begin
-WRITELN("Full SPRING 2023 Test File");
+WRITELN("There are no variables in the declaration section, so there will be undeclared "errors". This does not break the program, instead warning messages will be printed and undeclared variables will still be added to the symbol table as integers with their assigned values.");
 
 factorial := 1;
 WRITELN("Click in the CONSOLE WINDOW, and enter the value 6 for n:");
